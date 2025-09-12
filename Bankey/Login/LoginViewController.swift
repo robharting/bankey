@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func style(){
-        loginView.translatesAutoresizingMaskIntoConstraints = false
+        loginView.translatesAutoresizingMaskIntoConstraints = false  // always needed for auto layout
         
     }
     
@@ -30,10 +30,10 @@ extension LoginViewController {
         
         NSLayoutConstraint.activate([
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),  // 1x === 8points
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
             ])
-
+        
     }
 }
 
