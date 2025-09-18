@@ -75,7 +75,7 @@ extension LoginViewController {
         // Title Label
         NSLayoutConstraint.activate([
             subTitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
         
         
@@ -83,7 +83,7 @@ extension LoginViewController {
         NSLayoutConstraint.activate([
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: subTitleLabel.bottomAnchor, multiplier: 3),
             subTitleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
-            subTitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+            subTitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
         ])
         
         // Login view
