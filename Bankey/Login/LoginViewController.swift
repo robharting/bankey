@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: AnyObject {
+    // func didLogin(_ sender: LoginViewController ) // pass data - convention
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
     
     let titleLabel = UILabel()
@@ -15,6 +20,9 @@ class LoginViewController: UIViewController {
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
+    
+    // weak var to avoid retain cycles
+    weak var delegate: LoginViewControllerDelegate?
     
     
     // computed properties
@@ -127,6 +135,7 @@ extension LoginViewController  {
         
         if username.isEmpty || password.isEmpty {
             configureView(withMessage: "Username and password cannot be blank")
+            delegate?.didLogin()
             return
         }
         
