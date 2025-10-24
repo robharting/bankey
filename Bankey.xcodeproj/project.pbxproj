@@ -78,8 +78,8 @@
 		36E707B12E53699900984215 = {
 			isa = PBXGroup;
 			children = (
-				36E707BB2E53699900984215 /* Products */,
 				36E707BC2E53699900984215 /* Bankey */,
+				36E707BB2E53699900984215 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
