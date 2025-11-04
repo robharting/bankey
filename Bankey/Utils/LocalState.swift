@@ -19,6 +19,7 @@ public class LocalState {
             return UserDefaults.standard.bool(forKey: Keys.hasOnboarded.rawValue)
         } set(newValue) {
             UserDefaults.standard.set(newValue, forKey: Keys.hasOnboarded.rawValue)
+            // as of iOS 12 not needed anymore
             UserDefaults.standard.synchronize()
         }
     }
