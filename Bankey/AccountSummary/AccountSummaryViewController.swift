@@ -26,11 +26,10 @@ class AccountSummaryViewController: UIViewController {
 extension AccountSummaryViewController {
     private func setup() {
         setupTableView()
+        setupTableViewHeader()
     }
     
     private func setupTableView() {
-        view.backgroundColor = .systemGreen
-        
         // protocol-delegate is happening twice
         tableView.delegate = self
         tableView.dataSource = self
@@ -44,6 +43,19 @@ extension AccountSummaryViewController {
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+    private func setupTableViewHeader() {
+        let header = AccountSummaryHeaderView(frame: .zero)
+        
+        // the height
+        var size = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        size.width = UIScreen.main.bounds.width
+        // the width
+        header.frame.size = size
+        
+        tableView.tableHeaderView = header
+        
     }
 }
 
