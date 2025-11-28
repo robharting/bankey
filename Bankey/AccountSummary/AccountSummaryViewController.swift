@@ -13,6 +13,7 @@ class AccountSummaryViewController: UIViewController {
         "Pacman",
         "Space Invaders",
         "Space Patrol",
+        "Pacman II"
     ]
     
     var tableView = UITableView()
@@ -33,6 +34,10 @@ extension AccountSummaryViewController {
         // protocol-delegate is happening twice
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseID)
+        tableView.rowHeight = AccountSummaryCell.rowHeight
+        tableView.tableFooterView = UIView() // to add blank footer to hide empty cells
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
@@ -61,8 +66,7 @@ extension AccountSummaryViewController {
 
 extension AccountSummaryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = games[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath) as! AccountSummaryCell
         return cell
     }
     
