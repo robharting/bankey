@@ -9,20 +9,20 @@ import UIKit
 
 extension UIViewController {
     func setStatusBar() {
-        // refactor to get rid of deprecation
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithTransparentBackground() // to hide the Navigation Bar line also
-        navBarAppearance.backgroundColor = appColor
-        UINavigationBar.appearance().standardAppearance = navBarAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
-                
+        let statusBarSize = UIApplication.shared.statusBarFrame.size // deprecated but OK
+        let frame = CGRect(origin: .zero, size: statusBarSize)
+        let statusBarView = UIView(frame: frame)
         
-//        let statusBarSize = UIApplication.shared.statusBarFrame.size // deprecated but OK
-//        let frame = CGRect(origin: .zero, size: statusBarSize)
-//        let statusBarView = UIView(frame: frame)
-//        
-//        statusBarView.backgroundColor = appColor
-//        view.addSubview(statusBarView)
+        statusBarView.backgroundColor = appColor
+        view.addSubview(statusBarView)
+        
+//        // refactor to get rid of deprecation
+//        let navBarAppearance = UINavigationBarAppearance()
+//        navBarAppearance.configureWithTransparentBackground() // to hide the Navigation Bar line also
+//        navBarAppearance.backgroundColor = appColor
+//        UINavigationBar.appearance().standardAppearance = navBarAppearance
+//        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        
     }
     
     func setTabBarImage(imageName: String, title: String) {
