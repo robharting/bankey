@@ -29,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         onboardingContainerViewController.delegate = self
         dummyViewController.logoutDelegate = self
         
-        window?.rootViewController = mainViewController
+//        window?.rootViewController = mainViewController
+        window?.rootViewController = AccountSummaryViewController()
 //        window?.rootViewController = loginViewController
 //        window?.rootViewController = onboardingContainerViewController
 //        window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel lie you are in 1989.")
