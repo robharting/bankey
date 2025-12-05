@@ -27,6 +27,8 @@ extension AccountSummaryViewController {
     }
     
     private func setupTableView() {
+        tableView.backgroundColor = appColor
+        
         // protocol-delegate is happening twice
         tableView.delegate = self
         tableView.dataSource = self
@@ -87,7 +89,6 @@ extension AccountSummaryViewController: UITableViewDelegate {
 
 extension AccountSummaryViewController {
     private func fetchData() {
-        
         let savings = AccountSummaryCell.ViewModel(accountType: .Banking,
                                                             accountName: "Basic Savings",
                                                         balance: 929466.23)
