@@ -23,6 +23,4 @@ extension UITextField {
         isSecureTextEntry.toggle()
         passwordToggleButton.isSelected.toggle()
     }
-        
-    
 }

@@ -21,13 +21,7 @@ class AccountSummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        setupNavigationBar()
     }
-    
-    func setupNavigationBar() {
-        navigationItem.rightBarButtonItem = logoutBarButtonItem
-    }
-        
 }
 
 // MARK: - Setup
@@ -36,6 +30,11 @@ extension AccountSummaryViewController {
         setupTableView()
         setupTableViewHeader()
         fetchData()
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = logoutBarButtonItem
     }
     
     private func setupTableView() {
