@@ -161,13 +161,13 @@ extension LoginViewController  {
             return
         }
         
-        if username.isEmpty || password.isEmpty {
-            configureView(withMessage: "Username and password cannot be blank")
-//            delegate?.didLogin()
-            return
-        }
+        // For easier testing turn off this check
+//        if username.isEmpty || password.isEmpty {
+//            configureView(withMessage: "Username and password cannot be blank")
+//            return
+//        }
         
-        if username == "Rob" && password == "Welkom01" {
+        if username == "" && password == "" {
             signInButton.configuration?.showsActivityIndicator = true
             delegate?.didLogin()
         } else {
@@ -183,7 +183,7 @@ extension LoginViewController  {
         errorMessageLabel.text = message
         shakebutton()
     }
-    
+
     private func shakebutton() {
         let animation = CAKeyframeAnimation()
         animation.keyPath = "position.x"
