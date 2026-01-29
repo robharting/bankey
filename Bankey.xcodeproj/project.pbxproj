@@ -22,6 +22,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3672DF032F28E4FB0048F92F /* Exceptions for "BankeyUnitTests" folder in "Bankey" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AccountSummary/AccountTests.swift,
+				AccountSummary/ProfileTests.swift,
+				Utils/CurrencyFormatterTests.swift,
+			);
+			target = 36E707B92E53699900984215 /* Bankey */;
+		};
+		3672DF042F28E4FB0048F92F /* Exceptions for "BankeyUnitTests" folder in "BankeyUnitTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AccountSummary/AccountTests.swift,
+				AccountSummary/ProfileTests.swift,
+				Utils/CurrencyFormatterTests.swift,
+			);
+			target = 36196B1E2EE31F770068F2FE /* BankeyUnitTests */;
+		};
 		36E707E22E53699C00984215 /* Exceptions for "Bankey" folder in "Bankey" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -32,8 +50,12 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		36196B202EE31F770068F2FE /* BankeyUnitTests */ = {
+		3672DF012F28E4FB0048F92F /* BankeyUnitTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3672DF032F28E4FB0048F92F /* Exceptions for "BankeyUnitTests" folder in "Bankey" target */,
+				3672DF042F28E4FB0048F92F /* Exceptions for "BankeyUnitTests" folder in "BankeyUnitTests" target */,
+			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
 		};
@@ -69,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				36E707BC2E53699900984215 /* Bankey */,
-				36196B202EE31F770068F2FE /* BankeyUnitTests */,
+				3672DF012F28E4FB0048F92F /* BankeyUnitTests */,
 				36E707BB2E53699900984215 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,9 +121,6 @@
 			dependencies = (
 				36196B242EE31F770068F2FE /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				36196B202EE31F770068F2FE /* BankeyUnitTests */,
-			);
 			name = BankeyUnitTests;
 			packageProductDependencies = (
 			);
@@ -122,6 +141,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				3672DF012F28E4FB0048F92F /* BankeyUnitTests */,
 				36E707BC2E53699900984215 /* Bankey */,
 			);
 			name = Bankey;

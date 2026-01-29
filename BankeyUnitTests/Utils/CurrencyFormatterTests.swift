@@ -8,7 +8,7 @@
 import Foundation
 import XCTest
 
-@testable import Bankey  // allow to access all fioels in project
+@testable import Bankey  // allow to access all files in project
 
 class Test: XCTestCase {
     var formatter: CurrencyFormatter!
@@ -41,6 +41,7 @@ class Test: XCTestCase {
         let locale = Locale.current
         let currencySymbol = locale.currencySymbol!
         let result = formatter.dollarsFormatted(0)
+        // TODO fix this test to work in all locales
 //        XCTAssertEqual(result, "\(currencySymbol) 0,00")
         XCTAssertTrue(result.contains("0,00"))
     }
