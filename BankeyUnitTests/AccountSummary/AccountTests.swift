@@ -29,7 +29,7 @@ class AccountTests: XCTestCase {
            {
              "id": "2",
              "type": "CreditCard",
-             "name": "No-Fee All-In Chequing",
+             "name": "No-Fee All-In Chequing"accou,
              "amount": 17562.44,
              "createdDateTime" : "2011-06-21T15:29:32Z"
            },
