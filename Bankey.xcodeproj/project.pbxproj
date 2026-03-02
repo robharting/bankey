@@ -25,6 +25,7 @@
 		3672DF032F28E4FB0048F92F /* Exceptions for "BankeyUnitTests" folder in "Bankey" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AccountSummary/AccountSummaryViewControllerTests.swift,
 				AccountSummary/AccountTests.swift,
 				AccountSummary/ProfileTests.swift,
 				Utils/CurrencyFormatterTests.swift,
@@ -34,6 +35,7 @@
 		3672DF042F28E4FB0048F92F /* Exceptions for "BankeyUnitTests" folder in "BankeyUnitTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AccountSummary/AccountSummaryViewControllerTests.swift,
 				AccountSummary/AccountTests.swift,
 				AccountSummary/ProfileTests.swift,
 				Utils/CurrencyFormatterTests.swift,
